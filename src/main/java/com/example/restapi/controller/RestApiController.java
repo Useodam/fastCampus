@@ -1,10 +1,12 @@
 package com.example.restapi.controller;
 
 import com.example.restapi.model.BookQueryParam;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@Slf4j
 public class RestApiController {
 
     @GetMapping(path="/hello")
@@ -49,5 +51,10 @@ public class RestApiController {
         // 변수의 내용이 많을때 객체로 받는게 더 편하다
         System.out.println(bookQueryParam);
         return;
+    }
+
+    @DeleteMapping("/user/{name}/delete")
+    public void delete(@PathVariable String name){
+        log.info(name);
     }
 }
