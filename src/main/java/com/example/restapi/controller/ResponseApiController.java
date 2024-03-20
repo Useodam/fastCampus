@@ -2,7 +2,6 @@ package com.example.restapi.controller;
 
 import com.example.restapi.model.UserRequest;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
